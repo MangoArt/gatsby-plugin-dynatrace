@@ -1,0 +1,15 @@
+{
+  "name": "gatsby-plugin-dynatrace",
+  "version": "1.0.0",
+  "description": "Injects the Dynatrace JavaScript Agent into the generated pages and uses the JS ADK to track page changes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin"
+  ],
+  "author": "m.oehler@digital-city.solutions",
+  "license": "MIT"
+}
