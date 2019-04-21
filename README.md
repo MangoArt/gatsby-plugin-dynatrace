@@ -1,4 +1,4 @@
-# gatsby-plugin-google-analytics
+# gatsby-plugin-dynatrace
 
 Easily add Dynatrace RUM to your Gatsby site.
 
@@ -13,7 +13,7 @@ NOTE: This plugin only works in production mode! To test the injections and firi
 
 ## Install
 
-`npm install --save gatsby-plugin-dynatrace`
+`npm install --save @mangoart/gatsby-plugin-dynatrace`
 
 ## How to use
 
