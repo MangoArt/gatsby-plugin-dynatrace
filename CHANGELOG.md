@@ -1,3 +1,6 @@
+### Version 1.0.3
+ - Removed IDE workspace files from published package
+
 ### Version 1.0.2
  - Fixed documentation
 
