@@ -1,15 +1,38 @@
 {
-  "name": "gatsby-plugin-dynatrace",
-  "version": "1.0.0",
-  "description": "Injects the Dynatrace JavaScript Agent into the generated pages and uses the JS ADK to track page changes",
-  "main": "index.js",
+  "name": "@mangoart/gatsby-plugin-dynatrace",
+  "description": "Gatsby Plugin to inject the Dynatrace JavaScript Agent into the generated pages and uses the JS ADK to track page changes",
+  "version": "1.0.1",
+  "author": "Markus Oehler <m.oehler@digital-city.solutions>",
+  "main": "gatsby-browser.js",
+  "bugs": {
+    "url": "https://github.com/MangoArt/gatsby-plugin-dynatrace/issues"
+  },
+  "homepage": "https://github.com/MangoArt/gatsby-plugin-dynatrace",
+  "repository": "github:MangoArt/gatsby-plugin-dynatrace.git",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src --out-dir . --ignore **/__tests__",
+    "prepare": "cross-env NODE_ENV=production npm run build",
+    "watch": "babel -w src --out-dir . --ignore **/__tests__"
   },
   "keywords": [
     "gatsby",
-    "gatsby-plugin"
+    "gatsby-plugin",
+    "dynatrace",
+    "real user monitoring"
   ],
-  "author": "m.oehler@digital-city.solutions",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.0.0",
+    "html-react-parser": "^0.7.0",
+    "node-fetch": "^2.3.0"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "babel-preset-gatsby-package": "^0.1.4",
+    "cross-env": "^5.1.4"
+  }
 }
