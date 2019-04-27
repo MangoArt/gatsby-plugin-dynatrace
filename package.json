@@ -21,6 +21,17 @@
     "real user monitoring"
   ],
   "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
     "html-react-parser": "^0.7.0",
@@ -33,6 +44,9 @@
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "babel-preset-gatsby-package": "^0.1.4",
-    "cross-env": "^5.1.4"
+    "cross-env": "^5.1.4",
+    "husky": "^2.1.0",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.17.0"
   }
 }

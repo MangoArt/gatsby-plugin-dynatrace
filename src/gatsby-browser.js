@@ -9,42 +9,39 @@ globalHistory.listen(({ location }) => {
 })
 */
 
-let initialClientRenderDone = false;
+let initialClientRenderDone = false
 
 const shouldReport = () => {
   return
-    process.env.NODE_ENV === `production`
-      && typeof dtrum !== `undefined`
-      && initialClientRenderDone;
-};
+  process.env.NODE_ENV === `production` &&
+    typeof dtrum !== `undefined` &&
+    initialClientRenderDone
+}
 
 exports.onInitialClientRender = () => {
-  initialClientRenderDone = true;
-};
+  initialClientRenderDone = true
+}
 
-exports.onPreRouteUpdate = function()
-{
+exports.onPreRouteUpdate = function() {
   if (shouldReport()) {
-    const actionId = dtrum.enterAction('Navigate', 'gatsby');
-    window.dtActionId = actionId;
+    const actionId = dtrum.enterAction('Navigate', 'gatsby')
+    window.dtActionId = actionId
   }
-};
+}
 
-exports.onRouteUpdateDelayed = function()
-{
+exports.onRouteUpdateDelayed = function() {
   // console.log('onRouteUpdateDelayed');
   // should we mark the user action somehow?
-};
+}
 
-exports.onRouteUpdate = function()
-{
+exports.onRouteUpdate = function() {
   if (shouldReport()) {
     const closeAction = () => {
       if (window.dtActionId) {
-        dtrum.leaveAction(window.dtActionId);
-        window.dtActionId = null;
+        dtrum.leaveAction(window.dtActionId)
+        window.dtActionId = null
       }
-    };
+    }
 
     // wrap inside a timeout to make sure react-helmet is done with it's changes
     // (https://github.com/gatsbyjs/gatsby/issues/9139)
@@ -59,4 +56,4 @@ exports.onRouteUpdate = function()
       setTimeout(closeAction, 32)
     }
   }
-};
+}
