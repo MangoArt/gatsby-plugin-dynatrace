@@ -41,8 +41,8 @@
     "gatsby": "^2.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "7.4.3",
-    "@babel/core": "7.4.3",
+    "@babel/cli": "7.4.4",
+    "@babel/core": "7.4.4",
     "babel-preset-gatsby-package": "0.1.4",
     "cross-env": "5.2.0",
     "husky": "2.1.0",
