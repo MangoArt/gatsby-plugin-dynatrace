@@ -52,7 +52,7 @@
     "babel-preset-gatsby-package": "0.1.4",
     "cross-env": "5.2.0",
     "husky": "2.2.0",
-    "lint-staged": "8.1.5",
+    "lint-staged": "8.1.6",
     "prettier": "1.17.0",
     "release-it": "11.0.3"
   }
