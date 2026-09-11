@@ -39,7 +39,7 @@
     ]
   },
   "dependencies": {
-    "@babel/runtime": "^7.0.0",
+    "@babel/runtime": "^8.0.0",
     "html-react-parser": "^0.10.0",
     "node-fetch": "^2.3.0"
   },
@@ -47,7 +47,7 @@
     "gatsby": "^2.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "7.8.3",
+    "@babel/cli": "8.0.5",
     "@babel/core": "7.8.3",
     "babel-preset-gatsby-package": "0.2.15",
     "cross-env": "6.0.3",
